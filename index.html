@@ -3,14 +3,13 @@
 
 <html>
 	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<title>Gaspard Boissinot</title>
 		<link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
 		<link rel="manifest" href="manifest.json">
 		<meta name="theme-color" content="#0e0e0e">
 		<link rel="apple-touch-icon" href="images/icon-192.png">
-	</head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
@@ -190,26 +189,27 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <div id="gallery" class="gallery">
-    <div class="thumbnail fade-in" onclick="showLarge('images/rue.jpg')">
+    <div class="thumbnail fade-in" onclick="openViewer(gallery1Images, 0, 'large-img', 'gallery', 'large-image')"
         <img src="images/rue.jpg" alt="Photo 1">
     </div>
 
-    <div class="thumbnail fade-in" onclick="showLarge('images/rose.jpg')">
+    <div class="thumbnail fade-in" onclick="openViewer(gallery1Images, 1, 'large-img', 'gallery', 'large-image')"
         <img src="images/rose.jpg" alt="Photo 2">
     </div>
 
-    <div class="thumbnail fade-in" onclick="showLarge('images/batiment1.jpg')">
+    <div class="thumbnail fade-in" onclick="openViewer(gallery1Images, 2, 'large-img', 'gallery', 'large-image')"
         <img src="images/batiment1.jpg" alt="Photo 3">
     </div>
 			
-	<div class="thumbnail fade-in" onclick="showLarge('images/oiseaux.jpg')">
+	<div class="thumbnail fade-in" onclick="openViewer(gallery1Images, 3, 'large-img', 'gallery', 'large-image')"
         <img src="images/oiseaux.jpg" alt="Photo 4">
 	 </div>
 </div>
-        <div id="large-image" class="large-image" style="display: none;">
-            <img id="large-img" src="" alt="Grande image">
-            <button style="margin-top:15px;" onclick="backToGallery()">Revenir à la galerie</button>
-        </div>
+       <div id="large-image" class="large-image" style="display:none;">
+	<div class="nav left" onclick="prevImage()"></div>
+	<img id="large-img" src="">
+	<div class="nav right" onclick="nextImage()"></div>
+</div>
     </div>
 </div>
 
@@ -254,9 +254,10 @@
 </div>
 
 <div id="large-image2" class="large-image" style="display:none;">
-     <img id="large-img2">
-         <button onclick="backToGallery2()">Revenir à la galerie</button>
-        </div>
+	<div class="nav left" onclick="prevImage()"></div>
+	<img id="large-img2" src="">
+	<div class="nav right" onclick="nextImage()"></div>
+</div>
     </div>
 </div>
 
@@ -318,9 +319,10 @@
 </div>
 
 <div id="large-image3" class="large-image" style="display:none;">
-     <img id="large-img3">
-         <button onclick="backToGallery3()">Revenir à la galerie</button>
-        </div>
+	<div class="nav left" onclick="prevImage()"></div>
+	<img id="large-img3" src="">
+	<div class="nav right" onclick="nextImage()"></div>
+</div>
     </div>
 </div>
 
@@ -360,9 +362,10 @@
 </div>
 
 <div id="large-image4" class="large-image" style="display:none;">
-     <img id="large-img4">
-         <button onclick="backToGallery4()">Revenir à la galerie</button>
-        </div>
+	<div class="nav left" onclick="prevImage()"></div>
+	<img id="large-img4" src="">
+	<div class="nav right" onclick="nextImage()"></div>
+</div>
     </div>
 </div>
 
@@ -408,9 +411,10 @@
 </div>
 
 <div id="large-image5" class="large-image" style="display:none;">
-     <img id="large-img5">
-         <button onclick="backToGallery5()">Revenir à la galerie</button>
-        </div>
+	<div class="nav left" onclick="prevImage()"></div>
+	<img id="large-img5" src="">
+	<div class="nav right" onclick="nextImage()"></div>
+</div>
     </div>
 </div>
 
@@ -705,10 +709,62 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+const gallery1Images = [
+	'images/rue.jpg',
+	'images/rose.jpg',
+	'images/batiment1.jpg',
+	'images/oiseaux.jpg'
+];
+</script>
+		<script>
+let currentImages = [];
+let currentIndex = 0;
+let currentImgElement = null;
+
+function openViewer(images, index, imgId, galleryId, largeId) {
+	currentImages = images;
+	currentIndex = index;
+	currentImgElement = document.getElementById(imgId);
+
+	currentImgElement.src = currentImages[currentIndex];
+	document.getElementById(galleryId).style.display = 'none';
+	document.getElementById(largeId).style.display = 'block';
+}
+
+function nextImage() {
+	currentIndex = (currentIndex + 1) % currentImages.length;
+	currentImgElement.src = currentImages[currentIndex];
+}
+
+function prevImage() {
+	currentIndex =
+		(currentIndex - 1 + currentImages.length) % currentImages.length;
+	currentImgElement.src = currentImages[currentIndex];
+}
+</script>
+<script>
+let startX = 0;
+
+document.addEventListener('touchstart', e => {
+	startX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchend', e => {
+	let endX = e.changedTouches[0].clientX;
+	let diff = endX - startX;
+
+	if (Math.abs(diff) > 50) {
+		if (diff > 0) prevImage();
+		else nextImage();
+	}
+});
+</script>
 
 </body>
 
 </html>
+
 
 
 
