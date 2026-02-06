@@ -1,0 +1,716 @@
+ <!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<title>Gaspard Boissinot</title>
+		<link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
+		<link rel="manifest" href="manifest.json">
+		<meta name="theme-color" content="#0e0e0e">
+		<link rel="apple-touch-icon" href="images/icon-192.png">
+	</head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			
+	body {
+	background-color: #0e0e0e; 
+}
+			#intro {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+#intro {
+	position: relative;
+}
+
+#intro::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('images/Voiture noire.png');
+	background-size: cover;
+	background-position: center;
+	filter: blur(0px);
+	z-index: -1;
+	animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+			#intro .actions {
+	display: flex;
+	justify-content: center;
+}
+		</style>
+	</head>
+	<body class="is-preload">
+	<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
+
+			<!-- Intro -->
+				<div id="intro">
+  <div class="intro-content">
+    <h1>Gaspard Boissinot</h1>
+    <p>Audiovisuel ⸱ Cinéma ⸱ Montage ⸱ Photographie</p>
+    <ul class="actions">
+		<li>
+			<a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue
+			</a>
+		</li> 
+	</ul> 
+  </div>
+				</div>
+			<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">Portfolio</a>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li class="active"><a href="index.html">Photographie</a></li>
+						<li><a href="generic.html">Projets</a></li>
+						<li><a href="elements.html">à propos</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/gaspard._b" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<div id="main">
+
+					<!-- Featured Post -->
+						<article class="post featured">
+							<header class="major">
+								<h2><a href="#">Portraits<br /></a></h2>
+							</header>
+							<a href="#" class="image main" onclick="openModal3(); return false;" style="display:flex; justify-content:center; gap:10px;">
+								<img src="images/portrait1.jpg" style="width:40%; height:auto;">
+								<img src="images/portrait3.jpg" style="width:40%; height:auto;"></a>
+							<ul class="actions special">
+								<li><a href="#" class="button large"onclick="openModal3(); return false;">Voir</a></li>
+							</ul>
+						</article>
+
+					<!-- Posts -->
+						<section class="posts">
+							<article>
+								<header>
+									<h2><a href="#">noir & blanc<br /></a></h2>
+								</header>
+								<a href="#" class="image fit" onclick="openModal(); return false;">
+									<img src="images/rose.jpg" alt="" />
+								</a>
+								<p></p>
+								<ul class="actions special">
+									<li><a href="#" class="button" onclick="openModal(); return false;">Voir</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+									<h2><a href="#">Prises de vues<br />
+									drones</a></h2>
+								</header>
+								<a href="#" class="image fit" onclick="openModal2(); return false;">
+									<img src="images/hiver2.jpg" alt="" />
+								</a>
+								<p></p>
+								<ul class="actions special">
+									<li><a href="#" class="button"onclick="openModal2(); return false;">Voir</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+									<h2><a href="#">Architecture<br /></a></h2>
+								</header>
+								<a href="#" class="image fit" onclick="openModal4(); return false;">
+									<img src="images/archi4.jpg" alt="">
+								</a>
+								<ul class="actions special">
+									<li>
+										<a href="#" class="button" onclick="openModal4(); return false;">Voir</a>
+									</li>
+								</ul>
+							</article>
+							
+							<article>
+								<header>
+									<h2><a href="#">Pose Longue<br /></a></h2>
+								</header>
+								<a href="#" class="image fit" onclick="openModal5(); return false;">
+									<img src="images/flou3.jpg" alt="" />
+								</a>
+								<p></p>
+								<ul class="actions special">
+									<li><a href="#" class="button" onclick="openModal5(); return false;">Voir</a></li>
+								</ul>
+							</article>
+							
+							<article>
+								<header>
+									<h2><a href="#">courts-métrages<br /></a></h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button">Full Story</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+									<span class="date">April 7, 2017</span>
+									<h2><a href="#">Augue lorem<br />
+									primis vestibulum</a></h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button">Full Story</a></li>
+								</ul>
+							</article>
+						</section>
+					
+
+<!-- Modale pour la galerie -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="gallery" class="gallery">
+    <div class="thumbnail fade-in" onclick="showLarge('images/rue.jpg')">
+        <img src="images/rue.jpg" alt="Photo 1">
+    </div>
+
+    <div class="thumbnail fade-in" onclick="showLarge('images/rose.jpg')">
+        <img src="images/rose.jpg" alt="Photo 2">
+    </div>
+
+    <div class="thumbnail fade-in" onclick="showLarge('images/batiment1.jpg')">
+        <img src="images/batiment1.jpg" alt="Photo 3">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge('images/oiseaux.jpg')">
+        <img src="images/oiseaux.jpg" alt="Photo 4">
+	 </div>
+</div>
+        <div id="large-image" class="large-image" style="display: none;">
+            <img id="large-img" src="" alt="Grande image">
+            <button style="margin-top:15px;" onclick="backToGallery()">Revenir à la galerie</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal2()">&times;</span>
+		<div id="gallery2" class="gallery">
+    <div class="thumbnail fade-in" onclick="showLarge2('images/hiver2.jpg')">
+        <img src="images/hiver2.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge2('images/hiver1.jpg')">
+        <img src="images/hiver1.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge2('images/hiver3.jpg')">
+        <img src="images/hiver3.jpg">
+    </div>
+
+	   <div class="thumbnail fade-in" onclick="showLarge2('images/hiver4.jpg')">
+        <img src="images/hiver4.jpg">
+    </div>
+
+	<div class="thumbnail fade-in" onclick="showLarge2('images/hiver5.jpg')">
+        <img src="images/hiver5.jpg">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge2('images/hiver6.jpg')">
+        <img src="images/hiver6.jpg">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge2('images/drone1.jpg')">
+        <img src="images/drone1.jpg">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge2('images/drone2.jpg')">
+        <img src="images/drone2.jpg">
+    </div>
+<div class="thumbnail fade-in" onclick="showLarge2('images/drone3.jpg')">
+        <img src="images/drone3.jpg">
+    </div>
+</div>
+
+<div id="large-image2" class="large-image" style="display:none;">
+     <img id="large-img2">
+         <button onclick="backToGallery2()">Revenir à la galerie</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal3()">&times;</span>
+		<div id="gallery3" class="gallery">
+    <div class="thumbnail fade-in" onclick="showLarge3('images/portrait1.jpg')">
+        <img src="images/portrait1.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge3('images/portrait2.jpg')">
+        <img src="images/portrait2.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge3('images/portrait3.jpg')">
+        <img src="images/portrait3.jpg">
+    </div>
+
+	   <div class="thumbnail fade-in" onclick="showLarge3('images/portrait4.jpg')">
+        <img src="images/portrait4.jpg">
+    </div>
+
+	<div class="thumbnail fade-in" onclick="showLarge3('images/portrait5.jpg')">
+        <img src="images/portrait5.jpg">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge3('images/portrait6.jpg')">
+        <img src="images/portrait6.jpg">
+    </div>
+
+  <div class="thumbnail fade-in" onclick="showLarge3('images/portrait7.jpg')">
+        <img src="images/portrait7.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge3('images/portrait8.jpg')">
+        <img src="images/portrait8.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge3('images/portrait9.jpg')">
+        <img src="images/portrait9.jpg">
+    </div>
+
+	   <div class="thumbnail fade-in" onclick="showLarge3('images/portrait10.jpg')">
+        <img src="images/portrait10.jpg">
+    </div>
+
+	<div class="thumbnail fade-in" onclick="showLarge3('images/portrait11.jpg')">
+        <img src="images/portrait11.jpg">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge3('images/portrait12.jpg')">
+        <img src="images/portrait12.jpg">
+    </div>
+
+	<div class="thumbnail fade-in" onclick="showLarge3('images/portrait13.jpg')">
+        <img src="images/portrait13.jpg">
+    </div>
+</div>
+
+<div id="large-image3" class="large-image" style="display:none;">
+     <img id="large-img3">
+         <button onclick="backToGallery3()">Revenir à la galerie</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal4()">&times;</span>
+		<div id="gallery4" class="gallery">
+    <div class="thumbnail fade-in" onclick="showLarge4('images/archi1.jpg')">
+        <img src="images/archi1.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge4('images/archi5.jpg')">
+        <img src="images/archi5.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge4('images/chateau1.jpg')">
+        <img src="images/chateau1.jpg">
+    </div>
+
+	   <div class="thumbnail fade-in" onclick="showLarge4('images/chateau2.jpg')">
+        <img src="images/chateau2.jpg">
+    </div>
+
+	<div class="thumbnail fade-in" onclick="showLarge4('images/archi4.jpg')">
+        <img src="images/archi4.jpg">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge4('images/archi3.jpg')">
+        <img src="images/archi3.jpg">
+    </div>
+	<div class="thumbnail fade-in" onclick="showLarge4('images/archi2.jpg')">
+        <img src="images/archi2.jpg">
+    </div>
+<div class="thumbnail fade-in" onclick="showLarge4('images/batiment1.jpg')">
+        <img src="images/batiment1.jpg">
+    </div>
+</div>
+
+<div id="large-image4" class="large-image" style="display:none;">
+     <img id="large-img4">
+         <button onclick="backToGallery4()">Revenir à la galerie</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal5()">&times;</span>
+		<div id="gallery5" class="gallery">
+    <div class="thumbnail fade-in" onclick="showLarge5('images/flou1.jpg')">
+        <img src="images/flou1.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge5('images/flou2.jpg')">
+        <img src="images/flou2.jpg">
+    </div>
+			
+    <div class="thumbnail fade-in" onclick="showLarge5('images/flou9.jpg')">
+        <img src="images/flou9.jpg">
+    </div>
+
+	   <div class="thumbnail fade-in" onclick="showLarge5('images/flou7.jpg')">
+        <img src="images/flou7.jpg">
+    </div>
+
+	<div class="thumbnail fade-in" onclick="showLarge5('images/flou3.jpg')">
+        <img src="images/flou3.jpg">
+    </div>
+			
+	<div class="thumbnail fade-in" onclick="showLarge5('images/flou4.jpg')">
+        <img src="images/flou4.jpg">
+    </div>
+	<div class="thumbnail fade-in" onclick="showLarge5('images/flou10.jpg')">
+        <img src="images/flou10.jpg">
+    </div>
+<div class="thumbnail fade-in" onclick="showLarge5('images/flou8.jpg')">
+        <img src="images/flou8.jpg">
+    </div>
+	<div class="thumbnail fade-in" onclick="showLarge5('images/flou5.jpg')">
+        <img src="images/flou5.jpg">
+    </div>
+	<div class="thumbnail fade-in" onclick="showLarge5('images/flou6.jpg')">
+        <img src="images/flou6.jpg">
+    </div>
+</div>
+
+<div id="large-image5" class="large-image" style="display:none;">
+     <img id="large-img5">
+         <button onclick="backToGallery5()">Revenir à la galerie</button>
+        </div>
+    </div>
+</div>
+
+<!-- Styles pour la modale (inchangés, mais assurez-vous qu'ils sont dans <head> ou ici) -->
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto;
+        position: relative;
+    }
+    .close {
+        position: absolute;
+        top: -2px;
+        right: 0px;
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover { color: #000; }
+    .gallery {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 10px;
+        margin-top: 15px;
+    }
+    .thumbnail {
+        cursor: pointer;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+    }
+    .thumbnail:nth-child(1) { animation-delay: 0.1s; }
+    .thumbnail:nth-child(2) { animation-delay: 0.2s; }
+    .thumbnail:nth-child(3) { animation-delay: 0.3s; }
+    .thumbnail:nth-child(4) { animation-delay: 0.4s; }
+    .thumbnail:nth-child(5) { animation-delay: 0.5s; }
+    .thumbnail:nth-child(6) { animation-delay: 0.6s; }
+    .thumbnail:nth-child(7) { animation-delay: 0.7s; }
+    /* Ajoutez des délais pour plus d'images */
+    .thumbnail img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 4px;
+    }
+    .large-image {
+        text-align: center;
+    }
+    .large-image img {
+        max-width: 100%;
+        max-height: 80vh;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+	@media (max-width: 768px) {
+		.gallery {
+			grid-template-columns: repeat(2, 1fr);
+    }
+</style>
+
+<!-- Script JavaScript corrigé -->
+<script>
+    function openModal() {
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('gallery').style.display = 'grid';
+        document.getElementById('large-image').style.display = 'none';
+    }
+
+    function showLarge(src) {
+        document.getElementById('large-img').src = src;
+        document.getElementById('gallery').style.display = 'none';
+        document.getElementById('large-image').style.display = 'block';
+    }
+
+    function backToGallery() {
+        document.getElementById('large-image').style.display = 'none';
+        document.getElementById('gallery').style.display = 'grid';
+    }
+
+    // Fermer la modale en cliquant en dehors
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('modal')) {
+            closeModal();
+        }
+        if (event.target == document.getElementById('modal2')) {
+            closeModal2();
+        }
+		if (event.target == document.getElementById('modal3')) {
+        closeModal3();
+        }
+		if (event.target == document.getElementById('modal4')) {
+        closeModal4();
+        }
+		if (event.target == document.getElementById('modal5')) {
+        closeModal5();
+        }
+    };
+
+    /* ---------- DEUXIÈME GALERIE ---------- */
+
+    function openModal2() {
+        document.getElementById('modal2').style.display = 'flex';
+    }
+
+    function closeModal2() {
+        document.getElementById('modal2').style.display = 'none';
+        document.getElementById('gallery2').style.display = 'grid';
+        document.getElementById('large-image2').style.display = 'none';
+    }
+
+    function showLarge2(src) {
+        document.getElementById('large-img2').src = src;
+        document.getElementById('gallery2').style.display = 'none';
+        document.getElementById('large-image2').style.display = 'block';
+    }
+
+    function backToGallery2() {
+        document.getElementById('large-image2').style.display = 'none';
+        document.getElementById('gallery2').style.display = 'grid';
+    }
+
+
+	    /* ---------- TROISIEME GALERIE ---------- */
+
+    function openModal3() {
+        document.getElementById('modal3').style.display = 'flex';
+    }
+
+    function closeModal3() {
+        document.getElementById('modal3').style.display = 'none';
+        document.getElementById('gallery3').style.display = 'grid';
+        document.getElementById('large-image3').style.display = 'none';
+    }
+
+    function showLarge3(src) {
+        document.getElementById('large-img3').src = src;
+        document.getElementById('gallery3').style.display = 'none';
+        document.getElementById('large-image3').style.display = 'block';
+    }
+
+    function backToGallery3() {
+        document.getElementById('large-image3').style.display = 'none';
+        document.getElementById('gallery3').style.display = 'grid';
+    }
+
+    /* ---------- QUATRIEME GALERIE ---------- */
+
+    function openModal4() {
+        document.getElementById('modal4').style.display = 'flex';
+    }
+
+    function closeModal4() {
+        document.getElementById('modal4').style.display = 'none';
+        document.getElementById('gallery4').style.display = 'grid';
+        document.getElementById('large-image4').style.display = 'none';
+    }
+
+    function showLarge4(src) {
+        document.getElementById('large-img4').src = src;
+        document.getElementById('gallery4').style.display = 'none';
+        document.getElementById('large-image4').style.display = 'block';
+    }
+
+    function backToGallery4() {
+        document.getElementById('large-image4').style.display = 'none';
+        document.getElementById('gallery4').style.display = 'grid';
+    }
+
+ /* ---------- CINQUIEME GALERIE ---------- */
+
+    function openModal5() {
+        document.getElementById('modal5').style.display = 'flex';
+    }
+
+    function closeModal5() {
+        document.getElementById('modal5').style.display = 'none';
+        document.getElementById('gallery5').style.display = 'grid';
+        document.getElementById('large-image5').style.display = 'none';
+    }
+
+    function showLarge5(src) {
+        document.getElementById('large-img5').src = src;
+        document.getElementById('gallery5').style.display = 'none';
+        document.getElementById('large-image5').style.display = 'block';
+    }
+
+    function backToGallery5() {
+        document.getElementById('large-image5').style.display = 'none';
+        document.getElementById('gallery5').style.display = 'grid';
+    }
+</script>
+					<!-- Footer -->
+						<footer>
+							<div class="pagination">
+								<!--<a href="#" class="previous">Prev</a>-->
+								<a href="#" class="page active">1</a>
+								<a href="#" class="page">2</a>
+								<a href="#" class="page">3</a>
+								<span class="extra">&hellip;</span>
+								<a href="#" class="page">8</a>
+								<a href="#" class="page">9</a>
+								<a href="#" class="page">10</a>
+								<a href="#" class="next">Next</a>
+							</div>
+						</footer>
+
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<form action="https://matias.ma/nsfw/" target="_blank">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</section>
+					<section class="split contact">
+						<section class="alt">
+							<h3>Address</h3>
+							<p>1234 Somewhere Road #87257<br />
+							Nashville, TN 00000-0000</p>
+						</section>
+						<section>
+							<h3>Phone</h3>
+							<p><a href="#">(000) 000-0000</a></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">info@untitled.tld</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/gaspard._b" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+			<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Gaspard Boissinot</li></ul>
+				</div>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
