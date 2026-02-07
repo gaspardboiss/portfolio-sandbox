@@ -722,11 +722,25 @@ const images3 = [
     'images/portrait14.jpg'
 ];
 
+function openModal3() {
+    document.getElementById('modal3').style.display = 'flex';
+    backToGallery3(); // s'assurer qu'on voit la galerie miniatures
+}
+
+function closeModal3() {
+    document.getElementById('modal3').style.display = 'none';
+}
+
 function showLarge3(src) {
-    currentIndex3 = images3.indexOf(src); // trouve l'index de l'image
-    document.getElementById('large-img3').src = src;
+    currentIndex3 = images3.indexOf(src);
+    document.getElementById('large-img3').src = images3[currentIndex3];
     document.getElementById('gallery3').style.display = 'none';
     document.getElementById('large-image3').style.display = 'block';
+}
+
+function backToGallery3() {
+    document.getElementById('large-image3').style.display = 'none';
+    document.getElementById('gallery3').style.display = 'block'; // mieux pour miniatures
 }
 
 function nextImage3() {
@@ -738,11 +752,15 @@ function prevImage3() {
     currentIndex3 = (currentIndex3 - 1 + images3.length) % images3.length;
     document.getElementById('large-img3').src = images3[currentIndex3];
 }
-    function backToGallery3() {
-        document.getElementById('large-image3').style.display = 'none';
-        document.getElementById('gallery3').style.display = 'block';
-    }
 
+// navigation clavier
+document.addEventListener('keydown', (e) => {
+    if(document.getElementById('large-image3').style.display === 'block') {
+        if(e.key === 'ArrowRight') nextImage3();
+        if(e.key === 'ArrowLeft') prevImage3();
+        if(e.key === 'Escape') backToGallery3();
+    }
+});
     /* ---------- QUATRIEME GALERIE ---------- */
 
     function openModal4() {
@@ -914,3 +932,4 @@ window.addEventListener('click', function(e) {
 </body>
 
 </html>
+
